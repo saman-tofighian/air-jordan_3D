@@ -95,25 +95,9 @@ const camera = new three.PerspectiveCamera(75, size.width / size.height);
 camera.position.set(0, 0, 7);
 Sc.add(camera);
 const aml = new three.AmbientLight("#fff", 1);
-const direct1 = new three.DirectionalLight("#fff", 2);
-direct1.position.set(0, 0, -1);
-const direct2 = new three.DirectionalLight("#fff", 2);
-direct2.position.set(0, 0, 1);
-const direct3 = new three.DirectionalLight("#fff", 2);
-direct3.position.set(0, -1, 0);
-const direct4 = new three.DirectionalLight("#fff", 2);
-direct4.position.set(0, 1, 0);
-const direct5 = new three.DirectionalLight("#fff", 2);
-direct5.position.set(-1, 0, 0);
-const direct6 = new three.DirectionalLight("#fff", 2);
-direct6.position.set(1, 0, 0);
-let lightColor = 0xffffff;
-setInterval(() => {
-  lightColor = Math.random() * 0xffffff;
-  direct1.color.setHex(lightColor);
-  direct2.color.setHex(lightColor);
-}, 2000);
-Sc.add(aml, direct1, direct2, direct3, direct4, direct5, direct6);
+const direct = new three.DirectionalLight("#fff", 1);
+direct.position.set(2, 2, 2);
+Sc.add(aml, direct);
 const canvas = document.getElementById("web");
 const renderer = new three.WebGLRenderer({
   canvas,
@@ -122,7 +106,7 @@ const renderer = new three.WebGLRenderer({
 });
 renderer.setSize(size.width, size.height);
 renderer.toneMapping = three.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.6;
+renderer.toneMappingExposure = 2;
 const orbit = new OrbitControls(camera, canvas);
 orbit.enableDamping = true;
 orbit.minDistance = 6;
