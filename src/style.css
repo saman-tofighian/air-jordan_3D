@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow: hidden;
+}
+#web {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  outline: none;
+}
+.div_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+}
+.div_btn > button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.div_btn > .btn-1 {
+  background: red;
+}
+.div_btn > .btn-2 {
+  background: green;
+}
+.div_btn > .btn-3 {
+  background: yellow;
+}
+.div_btn > .btn-4 {
+  background: rgb(255, 31, 255);
+}
